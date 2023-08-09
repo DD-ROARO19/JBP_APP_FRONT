@@ -1,0 +1,33 @@
+.BG {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    justify-content: center ;
+    background-image: url(../../assets/img/FONDO.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+.BG img{
+    margin: 5vh 0 0 5vh;
+    width:20em
+}
+a{
+    color: #000000;
+    text-decoration: none;
+}
+.submitbtn {
+    background: #ffeba7;
+    border: 0;
+    width: 50%;
+    height: 40px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: 28%;
+}

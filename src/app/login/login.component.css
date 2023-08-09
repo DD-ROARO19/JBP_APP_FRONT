@@ -1,0 +1,120 @@
+body 
+{
+  
+  font: 87.5%/1.5em 'Open Sans', sans-serif;
+  margin: 0;
+  height: 100vh;
+}
+.BG 
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  justify-content: center ;
+  background-image: url(../../assets/img/FONDO.jpg);
+  background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  color: white;
+}
+.BG img
+{
+  position: absolute;
+  left: 33%;
+  top: 5%;
+  width:10em
+}
+
+input 
+{
+  border: none;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  padding: 0;
+}
+
+p 
+{
+  line-height: 1.5em;
+}
+
+after 
+{
+  clear: both;
+}
+.animation
+{
+  position: absolute;
+    margin: 15em 0 0 3.7vh;
+    width: 335px;
+    height: 25em;
+    border-radius: 20px;
+  /* background: #000; */
+  background:
+  repeating-conic-gradient(from var(--a), gold 0%,
+  gold 5%, transparent 5%, transparent 40%, gold 50%);
+  animation: animate 5s linear infinite;
+}
+
+#login {
+  margin: 1em 0 0 2vh;
+  width: 300px;
+  text-align: center;
+}
+
+#login form {
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+  background: #22272a;
+  display: grid;
+  place-items: center;
+}
+
+.input {
+  background-color: #3b4148;
+  border-radius: 10px;
+  color: #a9a9a9;
+  margin-bottom: 2em;
+  padding-left:5px ;
+  width: 100%;
+  outline: 0;
+  height: 50px;
+}
+
+.submitbtn {
+  background: #ffeba7;
+  border: 0;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease-in-out;
+}
+
+.submitbtn:hover {
+  background: #076064;
+}
+@property --a
+{
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+@keyframes animate
+{
+    0%
+    {
+        --a: 0deg;
+    }
+    100%
+    {
+        --a:360deg;
+    }
+}

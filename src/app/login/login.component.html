@@ -1,0 +1,27 @@
+<body style=" height:100%;display:flex ; justify-content: center; align-items: center;">
+    <div class="BG">
+        <img alt="JBP LOGO" src="../assets/img/JBP-LOGO.png"/> 
+        <div class="animation">
+            <div id="login">
+                <form name="form-login">
+                    <h2>ACCESO</h2>
+                    <input 
+                    name="usuario"
+                    type="text" 
+                    class="input" 
+                    [(ngModel)]="usuario"
+                    required
+                    placeholder="UID" />
+                    <input 
+                    type="password" 
+                    class="input" 
+                    name="pass"
+                    [(ngModel)]="password"
+                    placeholder="Contraseña" />
+                    <input class="submitbtn" type="button" value="Iniciar sesion" (click)="iniciosesion()"  href="" routerLink="registro">
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

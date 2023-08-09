@@ -1,0 +1,28 @@
+<body>
+    <div class="navigation">
+        <div class="menuToggle"><i></i></div>
+        <div class="menu">
+            <ul>
+                <li style="--i:0.1s"><a href="#" routerLink="/inicio">
+                    <img src="../../assets/img/casa.png" alt="casa">
+                </a></li>
+                <li style="--i:0.2s"><a href="#" *ngIf="Serviciologin.eslogueado()" routerLink="/registro">
+                    <img src="../../assets/img/volante.png" alt="registro">
+                </a></li>
+                <li></li>
+                <li style="--i:0.3s"><a href="#" *ngIf="Serviciologin.eslogueado()" routerLink="/carros">
+                    <img src="../../assets/img/servidor.png" alt="DB">
+                </a></li>
+                <li style="--i:0.4s"><a href="#" routerLink="/inicio"
+                    *ngIf="Serviciologin.eslogueado(), else falso" (click)="cerrarsesion()" routerLink="/inicio">
+                    <img src="../../assets/img/salida.png" alt="salir">
+                </a></li>
+                <ng-template #falso>
+                    <li style="--i:0.4s"><a href="#" routerLink="/login">
+                        <img src="../../assets/img/entrar.png" alt="entrar">
+                    </a></li>
+                </ng-template>
+            </ul>
+        </div>
+    </div>
+</body>

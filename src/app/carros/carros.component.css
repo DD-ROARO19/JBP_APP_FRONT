@@ -1,0 +1,44 @@
+body 
+{
+    font: 87.5%/1.5em 'Open Sans', sans-serif;
+    margin: 0;
+    height: 100vh;
+}
+
+.BG 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    background-image: url(../../assets/img/FONDO.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+.BG img 
+{
+    position: absolute;
+    left: 26%;
+    top: 2%;
+    width:15em;
+}
+.tablas
+{
+    position: relative;
+    top: 20%;
+    margin: 5em 0 0 4vh;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+.tb
+{
+    color: whitesmoke;
+    font-size: 14px;
+}
+
