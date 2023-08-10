@@ -11,11 +11,11 @@ export class LoginComponent {
   usuario="";
   password="";
 
- constructor(public Serviciologin: LoginService){}
+constructor(public Serviciologin: LoginService){}
 
 iniciosesion(){
   if(this.usuario=="admin" && this.password=="1203"){
-alert("Bienvenido "+this.usuario);
+// alert("Bienvenido "+this.usuario);
   this.Serviciologin.login();
   }
   else{

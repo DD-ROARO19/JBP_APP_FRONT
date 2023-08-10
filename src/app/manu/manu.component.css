@@ -31,7 +31,7 @@ body
     position: relative;
     width: 65px;
     height: 65px;
-    background: goldenrod;
+    background: #ffeba7;
     border: 5px solid var(--clr);
     border-radius: 50%;
     cursor: pointer;

@@ -60,13 +60,15 @@ after
   animation: animate 5s linear infinite;
 }
 
-#login {
+#login 
+{
   margin: 1em 0 0 2vh;
   width: 300px;
   text-align: center;
 }
 
-#login form {
+#login form 
+{
   margin: auto;
   padding: 30px;
   border-radius: 10px;
@@ -75,7 +77,8 @@ after
   place-items: center;
 }
 
-.input {
+.input 
+{
   background-color: #3b4148;
   border-radius: 10px;
   color: #a9a9a9;
@@ -86,7 +89,8 @@ after
   height: 50px;
 }
 
-.submitbtn {
+.submitbtn 
+{
   background: #ffeba7;
   border: 0;
   width: 100%;
@@ -98,9 +102,11 @@ after
   transition: background 0.3s ease-in-out;
 }
 
-.submitbtn:hover {
+.submitbtn:hover 
+{
   background: #076064;
 }
+
 @property --a
 {
     syntax: '<angle>';
