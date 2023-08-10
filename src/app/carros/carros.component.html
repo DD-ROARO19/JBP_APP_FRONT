@@ -12,13 +12,13 @@
                     <th>Color</th>
                     <th>Espacio</th>
                 </tr>
-                <tr>
-                    <td>Jose</td>
-                    <td>Honda</td>
-                    <td>Fit</td>
-                    <td>JHL-5246</td>
-                    <td>Rojo</td>
-                    <td>5</td>
+                <tr *ngFor="let a of autos">
+                    <td>{{a.nombre}}</td>
+                    <td>{{a.marca}}</td>
+                    <td>{{a.modelo}}</td>
+                    <td>{{a.placa}}</td>
+                    <td>{{a.color}}</td>
+                    <td>{{a.espacio}}</td>
                 </tr>
             </table>
         </div>

@@ -11,15 +11,27 @@ export class LoginComponent {
   usuario="";
   password="";
 
+  datos = {
+    cuenta: "",
+    contra: ""
+  }
+
 constructor(public Serviciologin: LoginService){}
 
-iniciosesion(){
-  if(this.usuario=="admin" && this.password=="1203"){
-// alert("Bienvenido "+this.usuario);
-  this.Serviciologin.login();
+  iniciosesion(){
+
+    this.datos.cuenta = this.usuario;
+    this.datos.contra = this.password;
+
+    this.Serviciologin.login(this.datos).subscribe({
+      next: res => {
+        this.Serviciologin.llenarDatos(res);
+      },
+      error: err => {
+        console.log("Enviado:",this.datos,"\nRecivido",err);
+      }
+    });
+
   }
-  else{
-    // alert("Usuario o contraseña incorrectos");
-  }
-}
+
 }

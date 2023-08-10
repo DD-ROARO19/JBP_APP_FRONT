@@ -8,12 +8,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegistroCarrosComponent } from './registro-carros/registro-carros.component';
 import { InicioComponent } from './inicio/inicio.component';
-import { LoginService } from './servicios/login.service';
 import { FormsModule } from '@angular/forms';
 import { ManuComponent } from './manu/manu.component';
 
 import { IonicModule } from '@ionic/angular';
 import { CarrosComponent } from './carros/carros.component';
+
+//Servicios
+import { LoginService } from './servicios/login.service';
+import { AutosService } from './servicios/autos.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,8 @@ import { CarrosComponent } from './carros/carros.component';
     IonicModule
   ],
   providers: [
-    LoginService
+    LoginService,
+    AutosService
   ],
   bootstrap: [AppComponent]
 })

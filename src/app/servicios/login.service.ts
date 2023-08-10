@@ -1,30 +1,61 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs';
+
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  constructor( private router: Router, private http: HttpClient) { }
-  login(){
-    localStorage.setItem("usuario", "admin");
-    this.router.navigate(["/inicio"]);
-  }
-  logout(){
-    //removeItem elimina una sola variable del localStorage
-    //localStorage.removeItem("usuario");
+  url = 'http://localhost:3000/login';
 
-    //clear elimina todas las variabbles del localStorage
+  constructor( private router: Router, private http: HttpClient) { }
+
+  login(cuenta: object){
+    return this.http.post<any>(this.url, cuenta).pipe(map( i => i.cuenta ));
+  }
+
+  llenarDatos(res:any){
+    localStorage.setItem("cuenta", res.nombre+"@"+res.email);
+    localStorage.setItem("sucursal", res.sucursal);
+    // localStorage.setItem( "token", res.token );
+    if (res.admin) {
+      localStorage.setItem("control", res.admin);
+    }
+  }
+
+  logout(){
     localStorage.clear();
-    this.router.navigate(["/login"]);
   }//cierre de logout
 
   eslogueado():boolean{
-    if(localStorage.getItem("usuario")!=null){
+    if(localStorage.getItem("cuenta")!=null){
       return true;
     }else{
 return false;
     }
   }
+
+  esAdmin():boolean {
+    if(localStorage.getItem('control') != null){
+      return true;
+    }else{
+      return false;
+    }
+  }
+
+  getCuenta(){
+    return localStorage.getItem('cuenta');
+  }
+
+  getSucursal(){
+    return localStorage.getItem('sucursal');
+  }
+
+  // Para cuendo sirva.
+  // getToken(){
+  //   return localStorage.getItem('token');
+  // }
+
 }
