@@ -19,7 +19,7 @@ iniciosesion(){
   this.Serviciologin.login();
   }
   else{
-    alert("Usuario o contraseña incorrectos");
+    // alert("Usuario o contraseña incorrectos");
   }
 }
 }
