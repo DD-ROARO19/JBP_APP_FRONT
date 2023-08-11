@@ -17,7 +17,7 @@ export class LoginService {
   }
 
   llenarDatos(res:any){
-    localStorage.setItem("cuenta", res.nombre+"@"+res.email);
+    localStorage.setItem("cuenta", res.UID);
     localStorage.setItem("sucursal", res.sucursal);
     // localStorage.setItem( "token", res.token );
     if (res.admin) {

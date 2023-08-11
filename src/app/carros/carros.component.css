@@ -42,3 +42,20 @@ body
     font-size: 14px;
 }
 
+table {
+    position: relative;
+    left: -9%;
+    max-width: 100%;
+    background-color: rgb(31, 27, 27);
+}
+
+caption {
+    font-size: 25px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+#T2 {
+    width: 100%;
+    left: -9%;
+}

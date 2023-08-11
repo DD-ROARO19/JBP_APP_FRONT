@@ -22,5 +22,27 @@
                 </tr>
             </table>
         </div>
+
+        <div class="tablas">
+            <table id="T2" class="tb" border="1">
+                <caption>Autos Ya Entregados</caption> 
+                <tr>
+                    <th>Nombre</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Placa</th>
+                    <th>Color</th>
+                    <!-- <th>Espacio</th> -->
+                </tr>
+                <tr *ngFor="let a of entregados">
+                    <td>{{a.nombre}}</td>
+                    <td>{{a.marca}}</td>
+                    <td>{{a.modelo}}</td>
+                    <td>{{a.placa}}</td>
+                    <td>{{a.color}}</td>
+                    <!-- <td>{{a.espacio}}</td> -->
+                </tr>
+            </table>
+        </div>
     </div>
 </body>

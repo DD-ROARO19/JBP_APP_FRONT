@@ -11,8 +11,31 @@ export class AutosService {
 
   constructor( private http: HttpClient ){}
 
-  getAll(sucursal:any){
-    return this.http.get<any>(this.url+"?sucursal="+sucursal).pipe(map( i => i.autos ));
+  getAll(){
+    return this.http.get<any>(this.url).pipe(map( i => i.autos ));
+  }
+  getAllEn(){
+    return this.http.get<any>(this.url+'/en').pipe(map( i => i.autos ));
+  }
+
+  getAuto(auto:Object){
+    return this.http.post<any>(this.url+'/encontrar', auto).pipe(map( i => i.auto ));
+  }
+
+  guardarAuto(auto:Object){
+    return this.http.post<any>(this.url,auto);
+  }
+
+  modificarAuto(auto:Object){
+    return this.http.put<any>(this.url, auto);
+  }
+
+  desactivarAuto(placa:String){
+    return this.http.post<any>(this.url, placa);
+  }
+
+  cobrarAuto(auto:Object){
+    return this.http.put<any>(this.url+'/cobrar', auto);
   }
 
 }
